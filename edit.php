@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         $_SESSION['path'] =  $finalPath = './image/'.$finalName;
         
     }else{
-        $errors['image'] = "*this extention is not allowed";
+        $errors['image'] = " extention is not allowed";
     }
   }else{    
     $errors['image'] = ' required';
@@ -61,7 +61,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
      if(count($errors) > 0){
          foreach($errors as $key => $val){
-             echo '* '.$key.' : '.$val.'<br>';
+             echo $key."=>".$val;
          }
      }else{
       // DB code

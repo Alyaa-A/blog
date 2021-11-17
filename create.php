@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             $_SESSION['path'] =  $finalPath = './image/'.$finalName;
             
         }else{
-            $errors['image'] = "*this extention is not allowed";
+            $errors['image'] = " extention is not allowed";
         }
       }else{    
         $errors['image'] = ' required';

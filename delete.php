@@ -1,12 +1,11 @@
 <?php 
 require 'dbConnection.php';
-require 'checklogin.php';
 require 'helpers.php';
 
 $id = $_GET['id'];
 
 # Validate id ... 
-if (validate($id , 5)) {
+if (validate($id ,3)) {
   
 
     #delete logic
@@ -24,9 +23,9 @@ if (validate($id , 5)) {
     $op = mysqli_query($con , $sql);
 
         if ($op) {
-            $message = 'Row removed';
+            $message = ' removed';
         }else{
-            $message = 'Error tr again';
+            $message = 'error';
         }
         
 }else{
